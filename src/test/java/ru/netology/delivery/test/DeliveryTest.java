@@ -24,7 +24,7 @@ class DeliveryTest {
     void shouldSuccessfulPlanAndReplanMeeting() {
         Configuration.holdBrowserOpen = true;
         var validUser = DataGenerator.Registration.generateUser("ru");
-        var validCity = DataGenerator.generateCity("ru");
+        var validCity = DataGenerator.generateCity();
         var daysToAddForFirstMeeting = 4;
         var firstMeetingDate = DataGenerator.generateDate(daysToAddForFirstMeeting);
         var daysToAddForSecondMeeting = 7;

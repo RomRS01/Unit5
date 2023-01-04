@@ -18,10 +18,12 @@ public class DataGenerator {
         return date;
     }
 
-    public static String generateCity(String locale) {
-        Faker faker = new Faker(new Locale(locale));
-        String city = faker.address().city();
-        return city;
+    public static String generateCity() {
+        var cities  = new String[]{"Волгоград", "Москва", "Тамбов"};
+        return  cities[new Random().nextInt(cities.length)];
+       // Faker faker = new Faker(new Locale(locale));
+       // String city = faker.address().city();
+        //return city;
     }
 
     public static String generateName(String locale) {
@@ -41,7 +43,7 @@ public class DataGenerator {
         }
 
         public static UserInfo generateUser(String locale) {
-            UserInfo user = new UserInfo(generateCity("ru"), generateName("ru"), generatePhone("ru"));
+            UserInfo user = new UserInfo(generateCity(), generateName("ru"), generatePhone("ru"));
             return user;
         }
     }
