@@ -21,9 +21,7 @@ public class DataGenerator {
     public static String generateCity() {
         var cities  = new String[]{"Волгоград", "Москва", "Тамбов"};
         return  cities[new Random().nextInt(cities.length)];
-       // Faker faker = new Faker(new Locale(locale));
-       // String city = faker.address().city();
-        //return city;
+
     }
 
     public static String generateName(String locale) {
